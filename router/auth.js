@@ -6,11 +6,7 @@ require("../db/conn");
 const User = require("../model/userSchema");
 const authenticate = require("../middleware/authenticate");
  
-router.get("/", (req, res) => {
-  res.send(`hello world from the server roter.js`);
-});
 
- 
 
 // using asyn
 router.post("/register", async (req, res) => {
