@@ -1,0 +1,151 @@
+/* login */
+section.signup .signup-content{
+  display: flex ;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 2.2rem;
+  /* border: 1px solid black; */
+  padding: 18px;
+  box-shadow: 0px 1px 10px 0px #888888;
+}
+section.signup .form-group{
+  padding: 10px;
+}
+
+section.signup .form-title{
+  padding-top: 1rem;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+section.signup .form-group .zmdi{
+  font-size: 19px !important;
+} 
+section.signup input{
+  border: none !important;
+  border-bottom: 1px solid !important;
+  outline: none;
+  font-size: 19px;
+  padding-left: 1rem;
+}
+
+section.signup  figure {
+width: 25rem !important;
+}
+
+section.signup  .signup-image-link{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+  /* signin content *********************************************/
+section.sign-in .signin-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 1px 10px 0px #888888;
+  padding: 50px;
+  max-width: 930px;
+  margin: auto;
+}
+
+section.sign-in figure{
+width: 20rem;
+}
+
+
+section.sign-in input{
+  border: none !important;
+  border-bottom: 1px solid !important;
+  outline: none;
+  font-size: 19px;
+  padding-left: 1rem;
+}
+
+section.sign-in .form-group{
+  padding: 10px;
+}
+
+
+section.sign-in  .signup-image-link{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+section.sign-in .form-group .zmdi{
+  font-size: 19px !important;
+} 
+
+
+
+section.sign-in .form-title{
+  padding-top: 1rem;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+
+
+/* contact info ***********************/
+div.contact_info .row .contact_info_item{
+  width: 25%;
+    /* background: aliceblue; */
+    box-shadow: 0px 1px 10px 0px #888888;
+    padding: 10px 10px;
+}
+
+div.contact_info .row .contact_info_item .contact_info_content{
+  width: 100%;
+  padding-left: 10px;
+}
+
+
+div.contact_form  input{
+  outline: none;
+  border-color: #07aaf3;
+}
+
+
+div.contact_form .contact_form_container{
+  padding: 40px;
+  padding-bottom: 20px;
+    /* border: 1px solid; */
+    max-width: 800px;
+    margin: auto;
+    /* border: 1px solid black; */
+    
+    box-shadow: 0px 1px 10px 0px #888888;
+  
+} 
+
+div.contact_form .contact_form_container .contact_from_title{
+
+  padding-bottom: 12px;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+ 
+div.contact_form  .contact_form_message{
+  width: 100%;
+  outline:none;
+  border-color: #07aaf3;
+}
+
+
+
+
+/*  about **********************************************/
+div.emp-profile{
+  box-shadow: 0px 1px 10px 0px #888888;
+  padding: 20px;
+}
+
+ 
