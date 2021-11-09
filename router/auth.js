@@ -39,8 +39,7 @@ router.post("/register", async (req, res) => {
 
 // login route
 router.post("/signin", async (req, res) => {
-  //  console.log(req.body);
-  //  res.json({message :"awsome"});
+  
   try {
     let token;
     const { email, password } = req.body;
@@ -51,13 +50,13 @@ router.post("/signin", async (req, res) => {
 
     const userLogin = await User.findOne({ email: email });
 
-    // console.log(userLogin);
+    
 
     if (userLogin) {
       const isMatch = await bcrypt.compare(password, userLogin.password);
 
       token = await userLogin.generateAuthToken();
-      // console.log(token);
+      
 
       res.cookie("jwtoken", token, {
         expires: new Date(Date.now() + 25892000000),
@@ -131,7 +130,7 @@ router.get("/getall", async (req, res) => {
 // update the data
 router.post("/update", async (req, res) => {
   const { _id, chatPass } = req.body;
-  // console.log(req.body);
+   
   User.findById(_id, function (err, employee) {
     if (!employee)
       return next(new Error("Unable to Find Employee With This Id"));
