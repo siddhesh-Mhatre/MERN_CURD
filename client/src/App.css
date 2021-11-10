@@ -148,4 +148,15 @@ div.emp-profile{
   padding: 20px;
 }
 
- 
+@media only screen and (max-width: 599px) {
+  .contact_info_item_group{
+    flex-direction: column !important;
+    row-gap: 1rem !important;
+  }
+  .contact_info_item{
+    width: 100% !important;
+  }
+  .contact_form_name{
+    flex-direction: column !important;
+  }
+}

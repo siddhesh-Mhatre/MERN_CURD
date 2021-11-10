@@ -30,15 +30,15 @@ const Login = () => {
   return (
     <section className="sign-in">
       <div className="container mt-5">
-        <div className="signin-content">
-          <div className="signin-image">
-            <figure>     <img src={siginupic} alt="pic" /></figure>
+        <div className="signin-content row d-flex">
+          <div className="signin-image col-lg-6 col-md-12 col-sm-12">
+            <figure className="img-thumbnail">     <img src={siginupic} alt="pic" /></figure>
             <NavLink to="/signup" className="signup-image-link">
               create an acount
             </NavLink>
           </div>
 
-          <div className="signin-form">
+          <div className="signin-form col-lg-6 col-md-12 col-sm-12">
             <h2 className="form-title">sign in</h2>
             <form method="POST" className="register-form" id="register-form">
               <div className="form-group">

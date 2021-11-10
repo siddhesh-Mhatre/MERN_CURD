@@ -76,9 +76,9 @@ const Contact = () => {
     <>
       <div className="contact_info">
         <div className="container-fluid">
-          <div className="row mt-3 mb-5">
-            <div className="col-lg-10 offset-lg-1 d-flex justify-content-between">
-              <div className="contact_info_item d-flex justify-content-lg-start align-items-center">
+          <div className="row mt-3 mb-5 justify-content-center">
+            <div className="contact_info_item_group col-lg-10 offset-lg-1 row d-flex justify-content-between">
+              <div className="contact_info_item d-flex justify-content-lg-start align-items-center col-lg-4">
                 <img
                   src="https://img.icons8.com/office/24/000000/iphone.png"
                   alt="pone"
@@ -91,7 +91,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="contact_info_item d-flex justify-content-lg-start align-items-center ">
+              <div className="contact_info_item d-flex justify-content-lg-start align-items-center col-lg-4 ">
                 <img
                   src="https://img.icons8.com/material-outlined/24/4a90e2/mail.png"
                   alt="pone"
@@ -104,7 +104,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="contact_info_item d-flex justify-content-lg-start align-items-center">
+              <div className="contact_info_item d-flex justify-content-lg-start align-items-center col-lg-4 ">
                 <img
                   src="https://img.icons8.com/material-outlined/24/4a90e2/worldwide-location.png"
                   alt="pone"
@@ -125,8 +125,8 @@ const Contact = () => {
 
       <div className="contact_form">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-10 offset-1">
+          <div className="row d-flex justify-content-center align-items-center">
+            <div className="col-lg-10  ">
               <div className="contact_form_container ">
                 <div className="contact_from_title">get in touch</div>
                 <form method="POST" id="contact_form">

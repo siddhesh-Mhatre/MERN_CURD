@@ -1,52 +1,60 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import siginupic from "../images/signup.svg";
 import { NavLink, useNavigate } from "react-router-dom";
 const Signup = () => {
-  const history =useNavigate();
-  const [user,setUser]=useState({
-    name :"",email:"",phone : "" , work : "", password : "",cpassword : ""
+  const history = useNavigate();
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    work: "",
+    password: "",
+    cpassword: "",
   });
-let name,value;
-  const handleInputs=(e)=>{
-     console.log(e);
-     name = e.target.name;
-     value=e.target.value;
+  let name, value;
+  const handleInputs = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
 
-     setUser({...user,[name]:value});
-  } 
+    setUser({ ...user, [name]: value });
+  };
 
-const PostData = async (e)=>{
-  e.preventDefault();
-  const {name, email,phone , work, password,cpassword }=user;
- const res= await fetch("/register",{
-   method : "POST",
-   headers : {
-     "Content-Type" : "application/json"
-   },
-   body : JSON.stringify({
-    name, email,phone , work, password,cpassword
-   })
- });
- const data = await res.json();
- 
- if(res.status===422 || !data){
-   window.alert("INVALID REGISTRATION");
-   console.log("invalid registration")
- }
- else{
-  window.alert("sucessfully REGISTRATION");
-  console.log("sucessfully registration");
-  history("/login");
- }
-}
+  const PostData = async (e) => {
+    e.preventDefault();
+    const { name, email, phone, work, password, cpassword } = user;
+    const res = await fetch("/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        work,
+        password,
+        cpassword,
+      }),
+    });
+    const data = await res.json();
 
+    if (res.status === 422 || !data) {
+      window.alert("INVALID REGISTRATION");
+      console.log("invalid registration");
+    } else {
+      window.alert("sucessfully REGISTRATION");
+      console.log("sucessfully registration");
+      history("/login");
+    }
+  };
 
   return (
     <>
       <section className="signup">
         <div className="container mt-5">
-          <div className="signup-content">
-            <div className="signup-form">
+          <div className="signup-content row d-flex">
+            <div className="signup-form col-lg-6 col-md-12 col-sm-12">
               <h2 className="form-title">sign up</h2>
               <form method="POST" className="register-form" id="register-form">
                 <div className="form-group">
@@ -149,14 +157,15 @@ const PostData = async (e)=>{
                   />
                 </div>
               </form>
-                 </div>
-              <div className="signup-image">
-                  <figure>
-                  <img src={siginupic} alt="pic" />
-                  </figure>
-                  <NavLink to="/login" className="signup-image-link ">i m allready register</NavLink>
-              </div>
-         
+            </div>
+            <div className="signup-image col-lg-6 col-md-12 col-sm-12">
+              <figure className="img-thumbnail">
+                <img src={siginupic} alt="pic" />
+              </figure>
+              <NavLink to="/login" className="signup-image-link ">
+                i m allready register
+              </NavLink>
+            </div>
           </div>
         </div>
       </section>
