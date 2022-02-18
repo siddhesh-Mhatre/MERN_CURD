@@ -78,9 +78,34 @@ const Admin = () => {
       window.alert("fail to edite");
     } else {
       window.alert("sucessfully edite");
+      userContact();
+  
     }
   };
  
+
+
+  const deleteUser= async(_id) =>{
+    const res = await fetch("/delete", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _id
+      }),
+    });
+
+    const data = await res.json();
+    if (!data) {
+      console.log("User are not found");
+    } else {
+      alert("User remove"); 
+      // window.location.reload();
+      userContact();
+    }
+
+  }
   
   return (
     <div>
@@ -134,7 +159,7 @@ const Admin = () => {
                     <td>
                     <div> {curElem.phone}</div>  
                       <input
-                        type="text"
+                        type="number"
                         name={curElem._id + "phone"}
                         value={editedData.phone}
                         onChange={edite.bind(this, curElem._id)}
@@ -168,6 +193,9 @@ const Admin = () => {
                       <button type="submit" className="btn btn-outline-warning" onClick={poseditedData}>
                         Edit
                       </button>
+                      <button type="submit" className="btn btn-danger mx-2" onClick={()=>deleteUser(curElem._id)} >
+                                 Delete
+                          </button>
                     </td>
                   </tr>
                 );

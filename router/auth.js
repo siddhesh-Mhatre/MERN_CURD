@@ -186,4 +186,21 @@ if(work!==undefined){
 });
 
 
+router.post("/delete", async (req, res) => {
+  try {
+    const { _id } = req.body;
+
+    const deleteUser = await User.deleteOne({ _id });
+
+    if (deleteUser) {
+      res.json("Delete sucessfully");
+    }
+    if (!deleteUser) {
+      res.json("user not found");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
